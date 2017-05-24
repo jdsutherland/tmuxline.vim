@@ -4,10 +4,13 @@ fun! tmuxline#presets#powerline#get()
   call bar.left.add('a', '#S')
   call bar.left.add_left_sep()
 
+  call bar.right.add('x', '#(gmusicplaying.sh)')
+  call bar.right.add('x', '#(battery -t -g black)')
+
   call bar.right.add_right_sep()
-  call bar.right.add('y', '%Y-%m-%d')
-  call bar.right.add_right_alt_sep()
-  call bar.right.add('y', '%H:%M')
+  call bar.right.add('y', '%a, %b %d - %I:%M')
+  " call bar.right.add_right_alt_sep()
+  " call bar.right.add('y', '%H:%M')
   call bar.right.add_right_sep()
 
   call bar.right.add('z', '#h')
